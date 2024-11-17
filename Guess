@@ -1,0 +1,51 @@
+from random import *
+
+print("Игра Отгадайка")
+print("Я загадаю слово, а ты будешь его угадывать.")
+print("Я скажу тебе, сколько букв в этом слове. ")
+print("И еще ты можешь 5 раз узнать у меня, есть ли какая-либо буква в этом слове.")
+
+answer = input("Играем? Да/Нет")
+
+
+
+while answer != "нет":
+    word = randint(1,10)
+    if word == 1:
+     word = "ёжик"
+    elif word == 2:
+     word = "барабулька"
+    elif word == 3:
+     word = "компьютер"
+    elif word == 4:
+     word = "самолет"
+    elif word == 5:
+     word = "гойда"
+    elif word == 6:
+     word = "мама"
+    elif word == 7:
+     word = "пайтон"
+    elif word == 8:
+     word = "велкид"
+    elif word == 9:
+     word = "арбуз"
+    print("В этом слове", len(word), "букв")
+    print("Теперь ты можешь 5 раз спросить меня, есть ли какая-то буква в этом слове?")
+    
+    for i in range (5):
+        letter = input("Предположи букву")
+        if letter in word:
+           print("Молодец угадал")
+        else:
+           print("Не угадал")
+           
+    ptyBOSS = input("Какое сдлово я загадал?")
+    if ptyBOSS == word:
+        print("Теперь ты сигма великий потому-что угадал!!!")
+    else:
+        print("Попробуй ещЁ раз(((")
+
+
+    answer = input("Играем в игру снова? да/нет")
+
+print("Спасибо, что сыграли со мной")
